@@ -1,5 +1,5 @@
 # Preserve byte-level provenance of the research implementation on every OS.
-src/** -text
+src/** -text whitespace=cr-at-eol
 tests/unit/** -text
 *.md text eol=lf
 *.json text eol=lf

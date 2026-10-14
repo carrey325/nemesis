@@ -13,6 +13,6 @@ dist/
 *.npz
 *.pgn
 *.parquet
-vendor/
-weights/
-data/
+/vendor/
+/weights/
+/data/
