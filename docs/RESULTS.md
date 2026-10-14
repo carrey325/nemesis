@@ -56,7 +56,7 @@ python scripts/verify_showcase.py
 python scripts/make_figures.py
 ```
 
-The renderer loads only committed aggregates and writes seven figure pairs under `assets/`. PNGs support slide reuse; SVGs retain sharp text in the README. Matplotlib may produce small layout changes across platforms, but the exported metrics are fixed.
+The renderer writes an architecture diagram and seven evidence figure pairs under `assets/`, using committed aggregates for all empirical plots. PNGs support reuse; SVGs retain sharp text in the README. Matplotlib may produce small layout changes across platforms, but the exported metrics are fixed.
 
 For the research owner, the allowlisted export can be rebuilt from the original checkout:
 

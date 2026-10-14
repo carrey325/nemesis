@@ -52,7 +52,7 @@ def main():
             assert (path.parent/dest.split("#")[0]).exists(),(path,dest)
             links+=1
     for path in (ROOT/"assets").glob("*.svg"):ET.parse(path)
-    assert len(list((ROOT/"assets").glob("*.svg")))==7
+    assert len(list((ROOT/"assets").glob("*.svg")))==8
     for path in ROOT.rglob("*"):
         if not path.is_file() or any(x.startswith(".") for x in path.relative_to(ROOT).parts):continue
         assert path.suffix not in (".pt",".pth",".pgn",".parquet",".npy",".npz",".safetensors"),path
@@ -60,7 +60,7 @@ def main():
             body=path.read_text(encoding="utf-8")
             assert not re.search(r"(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----)",body),path
             assert not re.search(r"[A-Z]:[\\/](?:Users|Python file)[\\/]",body),path
-    print(f"PASS: 8-player arithmetic, both evaluator intervals, 24 histories, LoRA evidence, {len(provenance['unmodified_source_files'])} source hashes, {links} local links, 7 SVGs, publication allowlist.")
+    print(f"PASS: 8-player arithmetic, both evaluator intervals, 24 histories, LoRA evidence, {len(provenance['unmodified_source_files'])} source hashes, {links} local links, 8 SVGs, publication allowlist.")
 
 
 if __name__=="__main__":main()

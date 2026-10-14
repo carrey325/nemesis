@@ -5,6 +5,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.patches import Rectangle, Circle
 from matplotlib.ticker import FuncFormatter, MaxNLocator
 import numpy as np
 
@@ -33,6 +34,60 @@ def save(fig, name):
             path.write_text("\n".join(line.rstrip() for line in path.read_text(encoding="utf-8").splitlines()) + "\n",
                             encoding="utf-8", newline="\n")
     plt.close(fig)
+
+
+def opening():
+    with plt.rc_context({"font.family": "STIXGeneral", "mathtext.fontset": "stix", "font.size": 11}):
+        fig, axes = plt.subplots(2, 1, figsize=(10, 3.5))
+        fig.subplots_adjust(left=.025, right=.975, bottom=.04, top=.95, hspace=.35)
+        for ax in axes:
+            ax.set_xlim(0, 12)
+            ax.set_ylim(0, 1.8)
+            ax.axis("off")
+
+        def arrow(ax, start, end):
+            ax.annotate("", xy=end, xytext=start,
+                        arrowprops={"arrowstyle": "->", "color": INK, "lw": .8,
+                                    "shrinkA": 0, "shrinkB": 0, "mutation_scale": 9})
+
+        def block(ax, x, width, label, trainable=False):
+            ax.add_patch(Rectangle((x, .40), width, .52, lw=.85,
+                                  edgecolor=ACCENT if trainable else INK,
+                                  facecolor="white" if trainable else "#F4F4F3"))
+            ax.text(x + width / 2, .66, label, ha="center", va="center")
+
+        ax = axes[0]
+        ax.text(0, 1.55, "(a)  Personalized policy", fontsize=12)
+        ax.text(.18, .66, r"$x$", va="center", ha="center", fontsize=14)
+        for x, width, label, trainable in ((.85, 2.15, "Maia-3 encoder", False),
+                                         (4.0, 1.8, "Adapter", True),
+                                         (6.8, 1.85, "Policy head", False),
+                                         (9.45, 1.55, "Mask + softmax", False)):
+            block(ax, x, width, label, trainable)
+        for start, end in ((.4, .85), (3.0, 4.0), (5.8, 6.8), (8.65, 9.45), (11, 11.65)):
+            arrow(ax, (start, .66), (end, .66))
+        ax.text(3.5, .85, r"$h$", ha="center", fontsize=13)
+        ax.text(6.3, .85, r"$h'$", ha="center", fontsize=13)
+        ax.text(11.8, .66, r"$p$", va="center", ha="center", fontsize=14)
+        for x, label in ((1.925, "frozen"), (4.9, "trainable"), (7.725, "frozen")):
+            ax.text(x, .14, label, ha="center", fontsize=10, color=MUTED)
+
+        ax = axes[1]
+        ax.text(0, 1.63, "(b)  Residual adapter", fontsize=12)
+        ax.text(12, 1.63, "17,936 parameters", ha="right", fontsize=10, color=MUTED)
+        ax.text(.18, .66, r"$h$", va="center", ha="center", fontsize=14)
+        for x, width, label in ((1.2, 1.4, "LayerNorm"), (3.3, 1.6, r"Down: $d \,\to\,16$"),
+                                (5.6, 1.3, "GELU"), (7.6, 1.6, r"Up: $16\,\to\,d$")):
+            block(ax, x, width, label, True)
+        for start, end in ((.4, 1.2), (2.6, 3.3), (4.9, 5.6), (6.9, 7.6), (9.2, 10.23), (10.57, 11.65)):
+            arrow(ax, (start, .66), (end, .66))
+        ax.plot([.7, .7, 10.4], [.66, 1.27, 1.27], color=INK, lw=.8)
+        arrow(ax, (10.4, 1.27), (10.4, .83))
+        ax.add_patch(Circle((10.4, .66), .17, facecolor="white", edgecolor=INK, lw=.85))
+        ax.text(10.4, .66, "+", ha="center", va="center", fontsize=12)
+        ax.text(11.8, .66, r"$h'$", va="center", ha="center", fontsize=14)
+        ax.text(5.5, 1.32, "identity", ha="center", fontsize=10, color=MUTED)
+        save(fig, "opening_model")
 
 
 def prediction():
@@ -206,6 +261,6 @@ def conversion():
 
 
 if __name__ == "__main__":
-    for function in (prediction, identity, training, lora, decisions, decision_all, conversion):
+    for function in (opening, prediction, identity, training, lora, decisions, decision_all, conversion):
         function()
-    print("Rendered seven figures in SVG and PNG from evidence/results.json.")
+    print("Rendered model architecture and seven evidence figures in SVG and PNG.")

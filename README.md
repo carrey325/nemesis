@@ -10,13 +10,9 @@ Nemesis studies whether learning an individual player's habits improves future-m
 
 **Maia-3** is a pretrained neural network that predicts human chess moves. Nemesis freezes its existing weights and trains a small **residual adapter**: an added neural layer that adjusts the network's features. The adapter has **17,936 trainable parameters**.
 
-```mermaid
-%%{init: {"theme": "neutral"}}%%
-flowchart LR
-    A[Position history] --> B[Frozen Maia-3]
-    B --> C[Adapter]
-    C --> D[Move probabilities]
-```
+![Model architecture and residual adapter](assets/opening_model.svg)
+
+**Figure 1. Personalized policy architecture.** (a) Position history and ratings, represented by x, pass through the frozen encoder; the adapter adjusts its features before the frozen policy head produces legal-move probabilities p. (b) The adapter normalizes features h, compresses their width d to 16, applies a GELU nonlinear activation and projects back to d. The identity connection adds the original features to the learned update, yielding h′.
 
 Training uses PyTorch **autograd** to compute gradients and **AdamW** to update the adapter. The loss rewards probability assigned to the actual human move, with a penalty for drifting from the original model. Only legal moves receive probability.
 
