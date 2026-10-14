@@ -1,6 +1,6 @@
 # Engineering walkthrough
 
-[Back to project](../README.md) · [Results](RESULTS.md) · [中文](RESEARCH_ZH.md)
+[Back to project](../README.md) · [Results](RESULTS.md)
 
 ## Code reading map
 

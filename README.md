@@ -4,7 +4,7 @@ Personalized chess-move prediction with PyTorch, residual adapters and Q/V LoRA.
 
 Nemesis studies whether learning an individual player's habits improves future-move prediction, and how those predictions translate into move selection.
 
-[中文导览](docs/RESEARCH_ZH.md) · [Implementation](docs/ENGINEERING.md) · [Results](docs/RESULTS.md)
+[Implementation](docs/ENGINEERING.md) · [Results](docs/RESULTS.md)
 
 ## Model
 
