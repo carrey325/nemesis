@@ -42,6 +42,10 @@ Both interval calculations use 5,000 bootstrap replicates: repeat the sampling a
 
 The result supports a small positive Maia-3 development gain for the fixed eight-player cohort. Broader player resampling and Maia-2 provide the accompanying sensitivity views. These are model-estimated scores, not observed human match outcomes.
 
+![Both evaluator families and resampling scopes](../assets/decision_all.svg)
+
+Dots indicate mean gain; lines indicate 95% descriptive intervals. The README focuses on Maia-3; the full comparison is retained here.
+
 ![Prediction gain against decision gain](../assets/prediction_to_decision.svg)
 
 ## Rebuild the figures
