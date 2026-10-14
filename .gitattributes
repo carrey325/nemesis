@@ -1,0 +1,10 @@
+# Preserve byte-level provenance of the research implementation on every OS.
+src/** -text
+tests/unit/** -text
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+scripts/*.py text eol=lf
+*.svg text eol=lf
+*.png binary

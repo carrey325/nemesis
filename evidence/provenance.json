@@ -1,0 +1,273 @@
+{
+  "research_repository": "carrey325/nemesis-dev",
+  "research_commit": "88346089bd0c8363d0aea0ef073d482dee0c4637",
+  "evidence_sources": [
+    {
+      "path": "artifacts/B03/validation/dev_prediction_matrix.json",
+      "sha256": "a8bb3391d7d88f38832bfb3f72ba6e0029bd307c4cbf4d5de1cd8f14b0bfffbf"
+    },
+    {
+      "path": "artifacts/B03/dev_gate.json",
+      "sha256": "6c2b409c9a55db83195bab3448e40ec2a2f73b648593b84253785acb2ef70c3a"
+    },
+    {
+      "path": "artifacts/B03/training_summary.json",
+      "sha256": "cd40443b042d0c13b3f22f8862fd782e4ad736fb1d1e251e188cb80b4a69390b"
+    },
+    {
+      "path": "artifacts/V2/B05A/qv_real_model_evidence.json",
+      "sha256": "b582865959eb38dc9c587759f6e38842258685d3d944bb59b2822b0bbd7ac5ce"
+    },
+    {
+      "path": "artifacts/V2/B04B/bootstrap.json",
+      "sha256": "858e00cd7209c752de2d487f3ae943a7cfde6f87d80308a8c062b23ba1f93d35"
+    },
+    {
+      "path": "artifacts/B02/metrics_summary.json",
+      "sha256": "e94cbc58875c980a9fb15779600ac07999327a0a91478ae68c538412173abdcb"
+    },
+    {
+      "path": "artifacts/B01/stage_report.md",
+      "sha256": "b62ac83babb3dee96a2437f880b00086d0dcd50ceaaa8a3df6e661e416bf4e65"
+    },
+    {
+      "path": "artifacts/V2/B04B/prediction_to_decision.json",
+      "sha256": "a91d368bd41da3cdec2db47282ef17955070a9d828d2820bf552188c3fff1be8"
+    },
+    {
+      "path": "artifacts/V2/B04B/E3_PERSONAL_PLAIN_summary.json",
+      "sha256": "96f5810c5773c0ce97d0bd576db815c98b74b44fa898e168737b9558d35a70c5"
+    },
+    {
+      "path": "artifacts/V2/B04B/E2_PERSONAL_PLAIN_summary.json",
+      "sha256": "1e957f50d6f40915418711bec69dcc8e1399b0496d7e4234b9cd7541411e4ddc"
+    }
+  ],
+  "unmodified_source_files": [
+    {
+      "path": "src/nemesis/__init__.py",
+      "sha256": "f53a149b608d06cfe4d66dabd2689b194b0adb2242412194dfce92b8a8ec12a1"
+    },
+    {
+      "path": "src/nemesis/__main__.py",
+      "sha256": "383fb93b3d8047e41543a173d4537fe054fd7a59dcf9ca8a7eda4ed24a59f5af"
+    },
+    {
+      "path": "src/nemesis/data/__init__.py",
+      "sha256": "c5a1b9210537acdad779c7490e5e6692464e3571ea5faa5d3515915216b3a5f2"
+    },
+    {
+      "path": "src/nemesis/data/acquire.py",
+      "sha256": "8c623778cc428528baedf0db1811a3b52f8f7baee08492139dcb74d461c0dbc3"
+    },
+    {
+      "path": "src/nemesis/data/common.py",
+      "sha256": "f8cd2c0f73031a1ab923760b55590b98c04b6ecf66536d26cb60883cc0d11ebe"
+    },
+    {
+      "path": "src/nemesis/data/pipeline.py",
+      "sha256": "8926fc4cdc87dfef5f3a512cc100069be4c28b7054e2d2b184d12819ca1753c3"
+    },
+    {
+      "path": "src/nemesis/data/prepare.py",
+      "sha256": "f8001a36d2888dd1382cde255423b285c8407b00954bdc82a68b65db237b946c"
+    },
+    {
+      "path": "src/nemesis/data/splits.py",
+      "sha256": "e6e9c7f4efb8425164b3b30cc66a4614be655368189a6a41d291d1edbc75da67"
+    },
+    {
+      "path": "src/nemesis/evaluation/__init__.py",
+      "sha256": "3ecea9270bc9e4337109de00062f0a4398fdc7165c70ef8cfe0c2b4296797692"
+    },
+    {
+      "path": "src/nemesis/evaluation/budget.py",
+      "sha256": "b3ebf1b3138e9848361d073f811959796cdd46a2b5b0d722857a5dd3053d3624"
+    },
+    {
+      "path": "src/nemesis/evaluation/prediction.py",
+      "sha256": "6be65ce6fb286edbef72a135631f81c6155a31300c1685db7438757cea02a16f"
+    },
+    {
+      "path": "src/nemesis/models/__init__.py",
+      "sha256": "87143bce78e9f39f5bcd9c6933468e7bf716489f5d8f002a564816c60f01f0dc"
+    },
+    {
+      "path": "src/nemesis/models/adapters.py",
+      "sha256": "ca1680cdeb18e6c83019b0360701593afc3733fb54358af1f0d50a7f692289fd"
+    },
+    {
+      "path": "src/nemesis/models/budget.py",
+      "sha256": "8f37b57a6f4e3a7f22b5b18cb2d9533c876710f9c3a8b83cd3b0993ad712e2fe"
+    },
+    {
+      "path": "src/nemesis/models/calibrate.py",
+      "sha256": "310b561f88f27cd3c8d89e711f042fa78ce98ff4f5b34e435921a7ad1ca6d437"
+    },
+    {
+      "path": "src/nemesis/models/calibration_api.py",
+      "sha256": "60c18a1a24fb359b7112594bc9d54134b7e55d5c87f3c362e8a984823dfc29d0"
+    },
+    {
+      "path": "src/nemesis/models/common.py",
+      "sha256": "799d963625840378fce4e7722751acb6ce3281dbbf6bddf045e7f4792540beec"
+    },
+    {
+      "path": "src/nemesis/models/development_report.py",
+      "sha256": "18b978cb522b9167b9b0aff4c23ef76658190e4d1857008a77ed79326d032ec4"
+    },
+    {
+      "path": "src/nemesis/models/lora_qv.py",
+      "sha256": "2047cabaadbb7bd107e69aca8570ddd24426f07896348b45fdf7396ddbeab8cc"
+    },
+    {
+      "path": "src/nemesis/models/maia2_bridge.py",
+      "sha256": "ac21c9fbe95ffc13d49f85b666dcb506f95c837f54dac7d5f15997ebb961433f"
+    },
+    {
+      "path": "src/nemesis/models/maia3_bridge.py",
+      "sha256": "37815db2bd172ea69f1a147e11eb4fa9b8d2de558921c5ce3ac654b6a98b788d"
+    },
+    {
+      "path": "src/nemesis/models/personal_predictor.py",
+      "sha256": "b8e3e1e574ed9d94c9df2efe1834c9e80cefe8e8f858e3502d4d9d22626c0efc"
+    },
+    {
+      "path": "src/nemesis/models/source_compatibility.py",
+      "sha256": "2d344ac725e37a80497eab7a5f617c28f6647ea1649f9e140cad34ea5c70181a"
+    },
+    {
+      "path": "src/nemesis/models/train.py",
+      "sha256": "3a37b3d4914a5afd116514b2d7861aeffffac1ea68a514f06b34ac2a49210bb7"
+    },
+    {
+      "path": "src/nemesis/models/twins.py",
+      "sha256": "156866ec31dd7f7d6cdc51fc1d7508ffa2bc83e4493ec9ccfc9efb8e1013f84a"
+    },
+    {
+      "path": "src/nemesis/preflight.py",
+      "sha256": "37ec863cf87a960bd49f0b6144ac8c64c758b73f8c3f93be675dced820bccdbd"
+    },
+    {
+      "path": "src/nemesis/types.py",
+      "sha256": "55512b9c3c539beb7a849e413683f8d6c331a98b06e8982746d43f14b5c07e43"
+    },
+    {
+      "path": "src/nemesis/v2/__init__.py",
+      "sha256": "cff64d843a68f280ddba0913057d7d2f8602ecdee9be395bf62721b935cc25ac"
+    },
+    {
+      "path": "src/nemesis/v2/assets.py",
+      "sha256": "c590bf9a91c334444a93f21d6ba03400931f29437eb3e7cd45948e83b942b6b1"
+    },
+    {
+      "path": "src/nemesis/v2/challenge.py",
+      "sha256": "2c9da66c84617eccd946d07d7b9d843de655360c93c6f517a0d490efe641370b"
+    },
+    {
+      "path": "src/nemesis/v2/challenge_benchmark.py",
+      "sha256": "9df6d7566041f5b148691e2103a4b1d59006011a991ebfec2c905f95c4140407"
+    },
+    {
+      "path": "src/nemesis/v2/challenge_report.py",
+      "sha256": "f64d6948e8790b760af37e9530e01d91273b7769d1f3a0481de87e4f879c8f48"
+    },
+    {
+      "path": "src/nemesis/v2/challenge_resources.py",
+      "sha256": "f9448cee989e2ac10f2904ed232555f2ebcbec02490b7ee59ed6d2ebbf7722bd"
+    },
+    {
+      "path": "src/nemesis/v2/diagnostics.py",
+      "sha256": "6f53d07caf6ca11b7511154a13c5b8b437955dab7a854ef1eee05b7a63d562c2"
+    },
+    {
+      "path": "src/nemesis/v2/engine.py",
+      "sha256": "524bf68fe02ca99208939547f1cf722ae2e58533fbbcb2bf0384c9723a535394"
+    },
+    {
+      "path": "src/nemesis/v2/evaluate.py",
+      "sha256": "4c119a05a2806cbe9c7597ddcd335bcdff742e26960c73a83f500e7c565b6511"
+    },
+    {
+      "path": "src/nemesis/v2/freeze.py",
+      "sha256": "3f22cd5c663ae469d790f27a3632d683c20ec519b0817e54f7e6216ccc84446d"
+    },
+    {
+      "path": "src/nemesis/v2/guards.py",
+      "sha256": "20a66f27ae437ba6131669931eaf3e23b2e16489c118b84460cca7529ee8d80e"
+    },
+    {
+      "path": "src/nemesis/v2/matched_training.py",
+      "sha256": "b0523f2be762119e255d4dfe80acf6801d32fe8ae5e3bf9c95204946bf483295"
+    },
+    {
+      "path": "src/nemesis/v2/panels.py",
+      "sha256": "a8713eb4d1da8caa19c19be09607f9844c1ba6a18131e5df4657e5897588786c"
+    },
+    {
+      "path": "src/nemesis/v2/resources.py",
+      "sha256": "86d6cb7441b355c40c0f42383e139e7e9c1e7f70cb3d12cb373f41c5eaea4a66"
+    },
+    {
+      "path": "src/nemesis/v2/risk.py",
+      "sha256": "59eb2ca6dc850e59212d84526c44cca34abc34248e04542cb5a6d45835567f3c"
+    },
+    {
+      "path": "src/nemesis/v2/screen.py",
+      "sha256": "17ecd0281fce292ef4fd2ae7527eaa1dce2a85f3153f0dcd3077c24811ef83d7"
+    },
+    {
+      "path": "src/nemesis/v2/select.py",
+      "sha256": "2d375431491dbc1e1899ec818f76810e5ca99c7798097de40c8e4c67b19e2a99"
+    },
+    {
+      "path": "src/nemesis/v2/selection_replay.py",
+      "sha256": "c81170fae225e4e66bb85898b7438a36d1ab4b5e446d2b122320c75b0bc37312"
+    },
+    {
+      "path": "src/nemesis/v2/statistics.py",
+      "sha256": "f901aac18bdce61bdd1ad3917e849ecbf0b46fa0c26e1ed4f75d5f807ba13acd"
+    },
+    {
+      "path": "src/nemesis/v2/types.py",
+      "sha256": "ef426d224a2908e136034892d30907ad0f0990852c9a32e21415033fe9c90ab8"
+    },
+    {
+      "path": "src/nemesis/v2/utility.py",
+      "sha256": "63113a05134011494935484727345e2b98b65f3b8c77fbe5eb4e83960d19ab9d"
+    },
+    {
+      "path": "src/nemesis/v2/utility_actor.py",
+      "sha256": "3628e40a8605c29ed7e282aff9a22e1f5a06fd501efc0d9270a4512516be9b16"
+    },
+    {
+      "path": "src/nemesis/v2/utility_compute.py",
+      "sha256": "d99d31b221f057e732c1bd7cfdb9af10e20abd76cf197b994914db5e1c9aa331"
+    },
+    {
+      "path": "src/nemesis/v2/utility_continue.py",
+      "sha256": "4cc34dc8d77cd05f6025be4aa7967b9a96ccaf6163ec17af7b09b4234e3385b6"
+    },
+    {
+      "path": "src/nemesis/v2/utility_inputs.py",
+      "sha256": "d352050d6f2054da814c9d4c73b9b7d769d6475bdea3762133aabd2d7c2ca35b"
+    },
+    {
+      "path": "src/nemesis/v2/utility_report.py",
+      "sha256": "407a8fcbdc0b106185ab97ca9b61ad6c3edf3280ca896ebd212f1f7bcc2f5ce2"
+    },
+    {
+      "path": "tests/unit/test_adapters.py",
+      "sha256": "e5b5ecaaa18e84ebbcc0d6a0d84210877f37c85534f4306c02a719022d3a213a"
+    },
+    {
+      "path": "tests/unit/test_qv_lora.py",
+      "sha256": "48830805d016fd1ba512354644d2bc880b1bea5e165819a0e53bc1a902c62a16"
+    },
+    {
+      "path": "tests/unit/test_calibration.py",
+      "sha256": "55ba8e9e8767cdcc763cadd001ebac27a68decb0f3bc01b197ed0bbc086ad293"
+    }
+  ],
+  "export_scope": "Anonymous player-level summaries, training histories, first-party source and component tests."
+}

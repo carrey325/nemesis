@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nemesis-research-showcase"
+version = "0.1.0"
+description = "PyTorch personalization, custom residual adapters and Q/V LoRA for human chess behavior"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=2,<3", "torch>=2.8,<3"]
+
+[project.optional-dependencies]
+report = ["matplotlib>=3.9,<4"]
+test = ["pytest>=8,<10"]
+research = ["PyYAML>=6,<7", "psutil>=7,<8", "python-chess==1.999", "requests>=2,<3", "pyzstd>=0.19,<1", "pyarrow==23.0.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests/unit"]
